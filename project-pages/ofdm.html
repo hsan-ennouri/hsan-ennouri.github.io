@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../assets/images/1311.png" />
+    <title>Acoustic OFDM Transceiver | Hsan Ennouri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <script defer src="../js/script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <span class="nav-title">Hsan Ennouri</span>
+      </a>
+      <a class="button" href="mailto:hsan.ennouri@epfl.ch">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </div>
+
+    <div id="main-content">
+      <div id="project-header">
+          <div class="main-title">Acoustic OFDM Transceiver</div>
+          <div class="body-text">Fall 2025-2026 (EPFL - EE442)</div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Objective</div>
+        <div class="project-details-content">
+          <div class="body-text">
+            Designed and implemented a full Orthogonal Frequency Division Multiplexing (OFDM) communication system for acoustic transmission between a speaker and a microphone using MATLAB.
+          </div>
+        </div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Key Contributions</div>
+        <div class="project-details-content">
+          <div class="body-text">
+            <ul>
+                <li><strong>Protocol Architecture:</strong> Architected the software structure and communication protocol, enabling the system to distinguish and decode different payload types (text, binary images).</li>
+                <li><strong>Data Integrity:</strong> Implemented a custom frame structure containing header metadata and Cyclic Redundancy Check (CRC-8) for robust error detection in noisy acoustic channels.</li>
+                <li><strong>System Integration:</strong> Integrated frame synchronization, channel estimation (Zero-Forcing), and phase tracking (Viterbi-Viterbi) into a cohesive transceiver chain.</li>
+                <li><strong>Performance:</strong> Achieved 0% Bit Error Rate (BER) in high-SNR conditions and successfully demonstrated image transmission.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="project-gallery">
+        <div class="subheader-text">Visuals</div>
+        <div class="project-gallery-content">
+            
+            <div class="gallery-image-container">
+              <img src="../assets/images/ofdm_block.png" class="gallery-image">
+              <span class="image-caption">Fig 1. System Block Diagram</span>
+            </div>
+
+            <div class="gallery-image-container">
+              <img src="../assets/images/ofdm_protocol.png" class="gallery-image">
+              <span class="image-caption">Fig 2. Communication Protocol Architecture</span>
+            </div>
+
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/ofdm_ber.png" class="gallery-image">
+              <span class="image-caption">Fig 3. BER vs SNR Analysis</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/ofdm_constellation.png" class="gallery-image">
+              <span class="image-caption">Fig 4. Received Symbols (Low SNR)</span>
+            </div>
+        </div>
+      </div>
+
+      <div id="project-nav">
+        <a href="../index.html" class="button">
+            <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
+            <span class="button-text">Back to Home</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="footer">
+      <a class="icon-link" href="mailto:hsan.ennouri@epfl.ch">
+        <img src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+</body>
+</html>

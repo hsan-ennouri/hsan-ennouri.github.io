@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../assets/images/1311.png" />
+    <title>Morse Translator | Hsan Ennouri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <script defer src="../js/script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <span class="nav-title">Hsan Ennouri</span>
+      </a>
+      <a class="button" href="mailto:hsan.ennouri@epfl.ch">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </div>
+
+    <div id="main-content">
+      <div id="project-header">
+          <div class="main-title">Real-Time Morse Code Translator</div>
+          <div class="body-text">Spring 2023-2024 (EPFL - EE208)</div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Objective</div>
+        <div class="project-details-content">
+          <div class="body-text">
+            Developed a low-level embedded system capable of translating keypad input into audible Morse code and visual text in real-time, written entirely in AVR Assembly.
+          </div>
+        </div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Key Contributions</div>
+        <div class="project-details-content">
+          <div class="body-text">
+            <ul>
+                <li><strong>Low-Level Optimization:</strong> Co-wrote the entire codebase in Assembly (AVR) to manage precise timing constraints required for standard Morse dot/dash durations.</li>
+                <li><strong>Peripheral Drivers:</strong> Coded custom drivers for a 4x4 matrix keypad and an LCD display without using external libraries.</li>
+                <li><strong>Interrupt Handling:</strong> Configured external interrupts and timers to handle user inputs and stepper motor actuation simultaneously without blocking the CPU.</li>
+                <li><strong>Electromechanical Integration:</strong> Integrated a stepper motor driver to provide physical feedback (rotation) during the message input phase.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="project-gallery">
+        <div class="subheader-text">Visuals</div>
+        <div class="project-gallery-content">
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/morse_setup.png" class="gallery-image">
+              <span class="image-caption">Fig 1. Final System Setup</span>
+            </div>
+            <div class="gallery-image-container half-width">
+              <img src="../assets/images/morse_diag.png" class="gallery-image">
+              <span class="image-caption">Fig 2. System Architecture</span>
+            </div>
+        </div>
+      </div>
+
+      <div id="project-nav">
+        <a href="../index.html" class="button">
+            <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
+            <span class="button-text">Back to Home</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="footer">
+      <a class="icon-link" href="mailto:hsan.ennouri@epfl.ch">
+        <img src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+</body>
+</html>
