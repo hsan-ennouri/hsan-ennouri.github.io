@@ -30,7 +30,7 @@
         <div class="subheader-text">Objective</div>
         <div class="project-details-content">
           <div class="body-text">
-            Redesigned the electrical readout interface for a multi-sensor endovascular guidewire (4 pressure sensors) to monitor blood flow dynamics in real-time. The project focused on optimizing signal integrity and migrating the system to a custom PCB architecture.
+            Redesigned the electrical readout interface for a multi-sensor endovascular guidewire (4 pressure sensors) to monitor blood flow dynamics. The project focused on optimizing signal integrity and migrating the system to a custom PCB architecture.
           </div>
         </div>
       </div>
@@ -41,9 +41,9 @@
           <div class="body-text">
             <ul>
                 <li><strong>Analog Signal Chain:</strong> Validated a signal conditioning path using Instrumentation Amplifiers (AD623) and 8th-order Switched-Capacitor Filters (MAX7403) to amplify and clean micro-volt sensor outputs.</li>
-                <li><strong>Architecture Optimization:</strong> Conducted rigorous characterization of the legacy multiplexed I2C architecture, identifying critical bottlenecks. Re-engineered the circuit topology to ensure simultaneous data acquisition across all 4 channels.</li>
-                <li><strong>MCU Migration (STM32):</strong> Ported control logic from Arduino to an <strong>STM32 microcontroller</strong> to leverage higher processing speeds, DMA, and expanded I/O capabilities.</li>
-                <li><strong>PCB Design:</strong> Designed a custom Printed Circuit Board (PCB) integrating the new analog chain and MCU, utilizing proper grounding techniques for noise reduction.</li>
+                <li><strong>Architecture Optimization:</strong> Conducted rigorous characterization of the legacy multiplexed I2C architecture, identifying critical bottlenecks. Re-engineered the circuit topology to ensure data acquisition across all 4 channels.</li>
+                <li><strong>MCU Migration (STM32):</strong> Migrated logic from Arduino to an <strong>STM32 microcontroller</strong> to leverage higher processing speeds, expanded memory, and advanced peripheral capabilities.</li>
+                <li><strong>PCB Design:</strong> Designed a custom Printed Circuit Board (PCB) integrating the new analog chain and MCU.</li>
             </ul>
           </div>
         </div>
@@ -53,12 +53,16 @@
         <div class="subheader-text">Visuals</div>
         <div class="project-gallery-content">
             <div class="gallery-image-container">
-              <img src="../assets/images/microbs_block.png" class="gallery-image">
-              <span class="image-caption">Fig 1. PCB Design Block Diagram</span>
+              <img src="../assets/images/5.original image.png" class="gallery-image">
+              <span class="image-caption">Fig 1. PCB Design</span>
             </div>
             <div class="gallery-image-container">
-              <img src="../assets/images/microbs_pcb.png" class="gallery-image">
-              <span class="image-caption">Fig 2. Experimental Setup & Signal Path</span>
+              <img src="../assets/images/5.PCB_MostImportantCurrentPaths.jpg" class="gallery-image">
+              <span class="image-caption">Fig 2. Signal Path</span>
+            </div>
+            <div class="gallery-image-container">
+              <img src="../assets/images/5.PCBBlocs.png" class="gallery-image">
+              <span class="image-caption">Fig 3. PCB blocks</span>
             </div>
         </div>
       </div>
