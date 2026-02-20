@@ -138,7 +138,7 @@ body {
 .project-details-content {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 16px;
 }
 
     /* Project Gallery */
