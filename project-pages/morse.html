@@ -3,107 +3,145 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="../assets/images/1311.png" />
-    <title>Morse Translator | Hsan Ennouri</title>
+    <title>Morse Code Translator | Hsan Ennouri</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
     <script defer src="../js/script.js"></script>
+
+    <style>
+      .navbar-actions { display: flex; gap: 10px; align-items: center; }
+
+      a.button-filled {
+        padding: 8px 16px;
+        border: 3px solid #141414;
+        border-radius: 50px;
+        background-color: #141414;
+        color: #fff;
+        text-decoration: none;
+        width: fit-content;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      a.button-filled:hover { text-decoration: underline; text-decoration-thickness: 2px; cursor: pointer; }
+      a.button-filled .button-text { color: #fff; }
+
+      .section-divider { border: none; border-top: 2px solid #141414; margin: 0; }
+
+      #project-header { display: flex; flex-direction: column; gap: 6px; }
+      .project-meta { font-size: 16px; font-weight: 500; color: #666; }
+
+      .project-section { display: flex; flex-direction: column; gap: 10px; }
+      .project-section-content { display: flex; flex-direction: column; gap: 14px; }
+
+      .project-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+      #project-nav { display: flex; }
+      .left-arrow-icon { width: 16px; height: 16px; margin-top: 1px; }
+    </style>
 </head>
 <body>
     <div class="navbar">
       <a class="nav-title-link" href="../index.html">
         <span class="nav-title">Hsan Ennouri</span>
       </a>
-      <a class="button" href="mailto:hsan.ennouri@epfl.ch">
-        <span class="button-text">Contact Me</span>
-      </a>
+      <div class="navbar-actions">
+        <a class="button" href="../assets/documents/CV_Hsan_Ennouri.pdf" target="_blank">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button-filled" href="mailto:hsan.ennouri@epfl.ch">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
     </div>
 
     <div id="main-content">
+
       <div id="project-header">
-          <div class="main-title">Morse Code Translator</div>
-          <div class="body-text">Spring 2023-2024 (EPFL - EE208)</div>
+        <div class="main-title">Morse Code Translator</div>
+        <div class="project-meta">Spring 2023–2024 &nbsp;·&nbsp; EPFL — EE208</div>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 24px;">
+      <hr class="section-divider">
 
-        <div id="project-details">
-          <div class="subheader-text">Objective</div>
-          <div class="project-details-content">
-            <div class="body-text">
-              Developed a low-level embedded system capable of translating keypad input into audible Morse code and visual text in real-time, written entirely in AVR Assembly.
-            </div>
+      <div class="project-section">
+        <span class="subheader-text">Objective</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            Developed a low-level embedded system capable of translating keypad input into audible Morse code and visual text in real-time, written entirely in AVR Assembly.
           </div>
-        </div>
-
-        <div id="project-details">
-          <div class="subheader-text">Key Contributions</div>
-          <div class="project-details-content">
-            <div class="body-text">
-              <ul>
-                  <li><strong>Low-Level Optimization:</strong> Co-wrote the entire codebase in Assembly (AVR) to manage precise timing constraints required for standard Morse dot/dash durations.</li>
-                  <li><strong>Peripheral Drivers:</strong> Coded custom drivers for a 4x4 matrix keypad and an LCD display without using external libraries.</li>
-                  <li><strong>Interrupt Handling:</strong> Configured external interrupts and timers to handle user inputs and stepper motor actuation simultaneously without blocking the CPU.</li>
-                  <li><strong>Electromechanical Integration:</strong> Integrated a stepper motor driver to provide physical feedback (rotation) during the message input phase.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div id="project-links" style="margin-top: 30px; margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
-          
-          <a class="button" href="../assets/documents/rapport_projet_Morse .pdf" target="_blank">
-            <span class="button-text">View Full Report(in French) (PDF)</span>
-            <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-          </a>
-
-          <a class="button" href="https://github.com/hsan-ennouri/Microcontrollers-project" target="_blank">
-            <span class="button-text">View Code on GitHub</span>
-            <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-          </a>
-
         </div>
       </div>
+
+      <hr class="section-divider">
+
+      <div class="project-section">
+        <span class="subheader-text">Key Contributions</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            <ul>
+              <li><strong>Low-Level Optimization:</strong> Co-wrote the entire codebase in Assembly (AVR) to manage precise timing constraints required for standard Morse dot/dash durations.</li>
+              <li><strong>Peripheral Drivers:</strong> Coded custom drivers for a 4×4 matrix keypad and an LCD display without using external libraries.</li>
+              <li><strong>Interrupt Handling:</strong> Configured external interrupts and timers to handle user inputs and stepper motor actuation simultaneously without blocking the CPU.</li>
+              <li><strong>Electromechanical Integration:</strong> Integrated a stepper motor driver to provide physical feedback (rotation) during the message input phase.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="project-links">
+        <a class="button" href="../assets/documents/rapport_projet_Morse .pdf" target="_blank">
+          <span class="button-text">View Full Report — French (PDF)</span>
+          <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+        </a>
+        <a class="button" href="https://github.com/hsan-ennouri/Microcontrollers-project" target="_blank">
+          <span class="button-text">View Code on GitHub</span>
+          <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+        </a>
+      </div>
+
+      <hr class="section-divider">
 
       <div id="project-gallery">
-        <div class="subheader-text">Visuals</div>
+        <span class="subheader-text">Visuals</span>
         <div class="project-gallery-content">
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/0.image_setup.png" class="gallery-image">
-              <span class="image-caption">Fig 1. Final System Setup</span>
-            </div>
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/0.diagram_final.png" class="gallery-image">
-              <span class="image-caption">Fig 2. System Architecture</span>
-            </div>
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/0.image_clavier.jpg" class="gallery-image">
-              <span class="image-caption">Fig 3. Keypad configuration</span>
-            </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/0.image_setup.png" class="gallery-image">
+            <span class="image-caption">Fig 1. Final System Setup</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/0.diagram_final.png" class="gallery-image">
+            <span class="image-caption">Fig 2. System Architecture</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/0.image_clavier.jpg" class="gallery-image">
+            <span class="image-caption">Fig 3. Keypad Configuration</span>
+          </div>
         </div>
       </div>
 
       <div id="project-nav">
         <a href="../index.html" class="button">
-            <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
-            <span class="button-text">Back to Home</span>
+          <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
+          <span class="button-text">Back to Home</span>
         </a>
       </div>
+
     </div>
 
     <div id="footer">
-      
       <a class="icon-link" href="mailto:hsan.ennouri2002@gmail.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
-        <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" href="mailto:hsan.ennouri@epfl.ch">
         <img src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
+        <img src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://github.com/hsan-ennouri">
+        <img src="../assets/icons/github.svg" class="footer-icon"/>
       </a>
     </div>
 </body>

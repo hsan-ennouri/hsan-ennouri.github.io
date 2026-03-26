@@ -9,86 +9,126 @@
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
     <script defer src="../js/script.js"></script>
+
+    <style>
+      .navbar-actions { display: flex; gap: 10px; align-items: center; }
+
+      a.button-filled {
+        padding: 8px 16px;
+        border: 3px solid #141414;
+        border-radius: 50px;
+        background-color: #141414;
+        color: #fff;
+        text-decoration: none;
+        width: fit-content;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      a.button-filled:hover { text-decoration: underline; text-decoration-thickness: 2px; cursor: pointer; }
+      a.button-filled .button-text { color: #fff; }
+
+      .section-divider { border: none; border-top: 2px solid #141414; margin: 0; }
+
+      #project-header { display: flex; flex-direction: column; gap: 6px; }
+      .project-meta { font-size: 16px; font-weight: 500; color: #666; }
+
+      .project-section { display: flex; flex-direction: column; gap: 10px; }
+      .project-section-content { display: flex; flex-direction: column; gap: 14px; }
+
+      .project-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+      #project-nav { display: flex; }
+      .left-arrow-icon { width: 16px; height: 16px; margin-top: 1px; }
+    </style>
 </head>
 <body>
     <div class="navbar">
       <a class="nav-title-link" href="../index.html">
         <span class="nav-title">Hsan Ennouri</span>
       </a>
-      <a class="button" href="mailto:hsan.ennouri@epfl.ch">
-        <span class="button-text">Contact Me</span>
-      </a>
+      <div class="navbar-actions">
+        <a class="button" href="../assets/documents/CV_Hsan_Ennouri.pdf" target="_blank">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button-filled" href="mailto:hsan.ennouri@epfl.ch">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
     </div>
 
     <div id="main-content">
+
       <div id="project-header">
-          <div class="main-title">Readout Circuit for Endovascular Microsensors</div>
-          <div class="body-text">Summer 2025 (EPFL - MICROBS Laboratory)</div>
+        <div class="main-title">Readout Circuit for Endovascular Microsensors</div>
+        <div class="project-meta">Summer 2025 &nbsp;·&nbsp; EPFL — MICROBS Laboratory</div>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 24px;">
-        <div id="project-details">
-          <div class="subheader-text">Objective</div>
-          <div class="project-details-content">
-            <div class="body-text">
-              Redesigned the electrical readout interface for a multi-sensor endovascular guidewire (4 pressure sensors) to monitor blood flow dynamics. The project focused on optimizing signal integrity and migrating the system to a custom PCB architecture.
-            </div>
-          </div>
-        </div>
+      <hr class="section-divider">
 
-        <div id="project-details">
-          <div class="subheader-text">Key Contributions</div>
-          <div class="project-details-content">
-            <div class="body-text">
-              <ul>
-                  <li><strong>Analog Signal Chain:</strong> Validated a signal conditioning path using Instrumentation Amplifiers (AD623) and 8th-order Switched-Capacitor Filters (MAX7403) to amplify and clean micro-volt sensor outputs.</li>
-                  <li><strong>Architecture Optimization:</strong> Conducted rigorous characterization of the legacy multiplexed I2C architecture, identifying critical bottlenecks. Re-engineered the circuit topology to ensure data acquisition across all 4 channels.</li>
-                  <li><strong>MCU Migration (STM32):</strong> Migrated logic from Arduino to an <strong>STM32 microcontroller</strong> to leverage higher processing speeds, expanded memory, and advanced peripheral capabilities.</li>
-                  <li><strong>PCB Design:</strong> Designed a custom Printed Circuit Board (PCB) integrating the new analog chain and MCU.</li>
-              </ul>
-            </div>
+      <div class="project-section">
+        <span class="subheader-text">Objective</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            Redesigned the electrical readout interface for a multi-sensor endovascular guidewire (4 pressure sensors) to monitor blood flow dynamics. The project focused on optimizing signal integrity and migrating the system to a custom PCB architecture.
           </div>
         </div>
       </div>
+
+      <hr class="section-divider">
+
+      <div class="project-section">
+        <span class="subheader-text">Key Contributions</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            <ul>
+              <li><strong>Analog Signal Chain:</strong> Validated a signal conditioning path using Instrumentation Amplifiers (AD623) and 8th-order Switched-Capacitor Filters (MAX7403) to amplify and clean micro-volt sensor outputs.</li>
+              <li><strong>Architecture Optimization:</strong> Conducted rigorous characterization of the legacy multiplexed I2C architecture, identifying critical bottlenecks. Re-engineered the circuit topology to ensure data acquisition across all 4 channels.</li>
+              <li><strong>MCU Migration (STM32):</strong> Migrated logic from Arduino to an <strong>STM32 microcontroller</strong> to leverage higher processing speeds, expanded memory, and advanced peripheral capabilities.</li>
+              <li><strong>PCB Design:</strong> Designed a custom Printed Circuit Board (PCB) integrating the new analog chain and MCU.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
 
       <div id="project-gallery">
-        <div class="subheader-text">Visuals</div>
+        <span class="subheader-text">Visuals</span>
         <div class="project-gallery-content">
-            <div class="gallery-image-container">
-              <img src="../assets/images/5.original image.png" class="gallery-image">
-              <span class="image-caption">Fig 1. PCB Design</span>
-            </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/5.PCB_MostImportantCurrentPaths.jpg" class="gallery-image">
-              <span class="image-caption">Fig 2. Signal Path</span>
-            </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/5.PCBBlocs.png" class="gallery-image">
-              <span class="image-caption">Fig 3. PCB blocks</span>
-            </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/5.original image.png" class="gallery-image">
+            <span class="image-caption">Fig 1. PCB Design</span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/5.PCB_MostImportantCurrentPaths.jpg" class="gallery-image">
+            <span class="image-caption">Fig 2. Signal Path</span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/5.PCBBlocs.png" class="gallery-image">
+            <span class="image-caption">Fig 3. PCB Blocks</span>
+          </div>
         </div>
       </div>
 
       <div id="project-nav">
         <a href="../index.html" class="button">
-            <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
-            <span class="button-text">Back to Home</span>
+          <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
+          <span class="button-text">Back to Home</span>
         </a>
       </div>
+
     </div>
 
     <div id="footer">
-      
       <a class="icon-link" href="mailto:hsan.ennouri2002@gmail.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
-        <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" href="mailto:hsan.ennouri@epfl.ch">
         <img src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
+        <img src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://github.com/hsan-ennouri">
+        <img src="../assets/icons/github.svg" class="footer-icon"/>
       </a>
     </div>
 </body>
