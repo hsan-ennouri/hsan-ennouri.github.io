@@ -9,103 +9,142 @@
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
     <script defer src="../js/script.js"></script>
+
+    <style>
+      .navbar-actions { display: flex; gap: 10px; align-items: center; }
+
+      a.button-filled {
+        padding: 8px 16px;
+        border: 3px solid #141414;
+        border-radius: 50px;
+        background-color: #141414;
+        color: #fff;
+        text-decoration: none;
+        width: fit-content;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      a.button-filled:hover { text-decoration: underline; text-decoration-thickness: 2px; cursor: pointer; }
+      a.button-filled .button-text { color: #fff; }
+
+      .section-divider { border: none; border-top: 2px solid #141414; margin: 0; }
+
+      #project-header { display: flex; flex-direction: column; gap: 6px; }
+      .project-meta { font-size: 16px; font-weight: 500; color: #666; }
+
+      .project-section { display: flex; flex-direction: column; gap: 10px; }
+      .project-section-content { display: flex; flex-direction: column; gap: 14px; }
+
+      .project-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+      #project-nav { display: flex; }
+      .left-arrow-icon { width: 16px; height: 16px; margin-top: 1px; }
+    </style>
 </head>
 <body>
     <div class="navbar">
       <a class="nav-title-link" href="../index.html">
         <span class="nav-title">Hsan Ennouri</span>
       </a>
-      <a class="button" href="mailto:hsan.ennouri@epfl.ch">
-        <span class="button-text">Contact Me</span>
-      </a>
+      <div class="navbar-actions">
+        <a class="button" href="../assets/documents/CV_Hsan_Ennouri.pdf" target="_blank">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button-filled" href="mailto:hsan.ennouri@epfl.ch">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
     </div>
 
     <div id="main-content">
+
       <div id="project-header">
-          <div class="main-title">IoT-Enabled Biometric Smart Vault</div>
-          <div class="body-text">Fall 2024-2025 (NUS - CS3237)</div>
-      </div> 
+        <div class="main-title">IoT-Enabled Biometric Smart Vault</div>
+        <div class="project-meta">Fall 2024–2025 &nbsp;·&nbsp; NUS — CS3237</div>
+      </div>
 
-      <div style="display: flex; flex-direction: column; gap: 24px;">
-        <div id="project-details">
-          <div class="subheader-text">Objective</div>
-          <div class="project-details-content">
-            <div class="body-text">
-              Co-developed a secure, internet-connected physical vault. Responsible for the complete mechanical design, hardware integration, and the local embedded firmware.
-            </div>
+      <hr class="section-divider">
+
+      <div class="project-section">
+        <span class="subheader-text">Objective</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            Co-developed a secure, internet-connected physical vault. Responsible for the complete mechanical design, hardware integration, and the local embedded firmware.
           </div>
-        </div>
-
-        <div id="project-details">
-          <div class="subheader-text">Key Contributions</div>
-          <div class="project-details-content">
-            <div class="body-text">
-              <ul>
-                  <li><strong>Mechanical Design (CAD):</strong> Designed the vault enclosure and a custom sliding-bolt locking mechanism using CATIA. Modeled internal components to securely house the electronics and servo motor.</li>
-                  <li><strong>Embedded Firmware:</strong> Developed C++ control logic handling the 4x4 Keypad input, LCD status display, and Servo actuation. Implemented state machines for system initialization and sleep modes.</li>
-                  <li><strong>Hardware Integration:</strong> Integrated the ESP32 microcontroller with peripherals (servo, buttons, LCD), ensuring reliable physical actuation based on sensor inputs.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div id="project-links" style="margin-top: 5px; margin-bottom: 5px; display: flex; gap: 15px; flex-wrap: wrap;">
-          <a class="button" href="../assets/documents/Presentation_iot_project.pdf" target="_blank">
-            <span class="button-text">View project presentation (PDF)</span>
-            <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-          </a>
-
-          <a class="button" href="https://github.com/hsan-ennouri/Introduction-to-Iot-project" target="_blank">
-            <span class="button-text">View Code on GitHub</span>
-            <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-          </a>
         </div>
       </div>
 
-      
+      <hr class="section-divider">
+
+      <div class="project-section">
+        <span class="subheader-text">Key Contributions</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            <ul>
+              <li><strong>Mechanical Design (CAD):</strong> Designed the vault enclosure and a custom sliding-bolt locking mechanism using CATIA. Modeled internal components to securely house the electronics and servo motor.</li>
+              <li><strong>Embedded Firmware:</strong> Developed C++ control logic handling the 4×4 Keypad input, LCD status display, and Servo actuation. Implemented state machines for system initialization and sleep modes.</li>
+              <li><strong>Hardware Integration:</strong> Integrated the ESP32 microcontroller with peripherals (servo, buttons, LCD), ensuring reliable physical actuation based on sensor inputs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="project-links">
+        <a class="button" href="../assets/documents/Presentation_iot_project.pdf" target="_blank">
+          <span class="button-text">View Presentation (PDF)</span>
+          <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+        </a>
+        <a class="button" href="https://github.com/hsan-ennouri/Introduction-to-Iot-project" target="_blank">
+          <span class="button-text">View Code on GitHub</span>
+          <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+        </a>
+      </div>
+
+      <hr class="section-divider">
 
       <div id="project-gallery">
-        <div class="subheader-text">Visuals</div>
+        <span class="subheader-text">Visuals</span>
         <div class="project-gallery-content">
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/3.vault.png" class="gallery-image">
-              <span class="image-caption">Fig 1. Final System Prototype</span>
-            </div>
-            <div class="gallery-image-container half-width">
-              <img src="../assets/images/3.vault_lock.png" class="gallery-image">
-              <span class="image-caption">Fig 2. Locking Mechanism Detail</span>
-            </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/3.vault_door.png" class="gallery-image">
-              <span class="image-caption">Fig 3. Vault details</span>
-            </div>
-            <div class="gallery-image-container">
-              <img src="../assets/images/3.system_overview.png" class="gallery-image">
-              <span class="image-caption">Fig 4. System Architecture</span>
-            </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/3.vault.png" class="gallery-image">
+            <span class="image-caption">Fig 1. Final System Prototype</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/3.vault_lock.png" class="gallery-image">
+            <span class="image-caption">Fig 2. Locking Mechanism Detail</span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/3.vault_door.png" class="gallery-image">
+            <span class="image-caption">Fig 3. Vault Details</span>
+          </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/3.system_overview.png" class="gallery-image">
+            <span class="image-caption">Fig 4. System Architecture</span>
+          </div>
         </div>
       </div>
 
       <div id="project-nav">
         <a href="../index.html" class="button">
-            <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
-            <span class="button-text">Back to Home</span>
+          <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
+          <span class="button-text">Back to Home</span>
         </a>
       </div>
+
     </div>
 
     <div id="footer">
-      
       <a class="icon-link" href="mailto:hsan.ennouri2002@gmail.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
-        <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
-      </a>
-
-      <a class="icon-link" href="mailto:hsan.ennouri@epfl.ch">
         <img src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
+        <img src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://github.com/hsan-ennouri">
+        <img src="../assets/icons/github.svg" class="footer-icon"/>
       </a>
     </div>
 </body>
