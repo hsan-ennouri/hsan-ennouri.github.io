@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-
     <link rel="icon" href="./assets/images/1311.png" />
     <title>Hsan Ennouri - Engineering Portfolio</title>
     <meta name="description" content="Electrical Engineering Portfolio of Hsan Ennouri.">
@@ -13,58 +12,319 @@
     <link rel="stylesheet" href="./css/utilities.css">
 
     <script defer src="./js/script.js"></script>
+
+    <style>
+      /* ── NAV: filled Contact Me button ── */
+      .navbar-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      /* Override the standard button to get a filled variant */
+      a.button-filled {
+        padding: 8px 16px;
+        border: 3px solid #141414;
+        border-radius: 50px;
+        background-color: #141414;
+        color: #fff;
+        text-decoration: none;
+        width: fit-content;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      a.button-filled:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        cursor: pointer;
+      }
+      a.button-filled .button-text {
+        color: #fff;
+      }
+
+      /* ── Section dividers: bold top rule ── */
+      .section-divider {
+        border: none;
+        border-top: 2px solid #141414;
+        margin: 0;
+      }
+
+      /* ── Availability badge ── */
+      .availability-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #e8f5ee;
+        color: #1a7a50;
+        border-radius: 30px;
+        padding: 5px 14px 5px 9px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+      .availability-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22a060;
+        flex-shrink: 0;
+      }
+
+      /* ── Skills Section ── */
+      #skills-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .skills-groups {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .skill-group-row {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .skill-group-label {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: #888;
+        min-width: 150px;
+        flex-shrink: 0;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+
+      .skill-tag {
+        display: inline-block;
+        padding: 4px 13px;
+        border: 2px solid #d0d0d0;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #222;
+      }
+
+      /* ── Interests Section ── */
+      #interests-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .interest-block {
+        padding-left: 16px;
+        border-left: 3px solid #141414;
+      }
+
+      .interest-block-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .interest-block-desc {
+        font-size: 16px;
+        font-weight: 500;
+        color: #444;
+        line-height: 1.6;
+      }
+
+      .interests-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      /* ── Project card tags ── */
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: -16px; /* tighten the gap from card text */
+      }
+
+      .project-tag {
+        display: inline-block;
+        padding: 3px 10px;
+        border: 2px solid #d8d8d8;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #555;
+      }
+
+      /* ── Responsive ── */
+      @media only screen and (max-width: 600px) {
+        .skill-group-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+        .skill-group-label {
+          min-width: unset;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="navbar">
       <a class="nav-title-link" href="./index.html">
         <span class="nav-title">Hsan Ennouri</span>
       </a>
-      <a class="button" href="mailto:hsan.ennouri@epfl.ch">
-        <span class="button-text">Contact Me</span>
-      </a>
+      <div class="navbar-actions">
+        <a class="button" href="./assets/documents/CV_Hsan_Ennouri.pdf" target="_blank">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button-filled" href="mailto:hsan.ennouri@epfl.ch">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
     </div>
 
     <div id="main-content">
 
+      <!-- HERO -->
       <div id="portfolio-header">
         <div id="portfolio-header-image-container">
           <img src="./assets/images/Image_front.jpg" class="portfolio-header-image" alt="Hsan Ennouri">
         </div>
-
         <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm Hsan Ennouri.</span>
-              <div class="body-text">I’m an Electrical and Electronics Engineering Master's Student at EPFL, interested in embedded systems, Signal Processing, and Bioelectronics.</div>
+          <div class="header-text">
+            <div class="availability-badge">
+              <div class="availability-dot"></div>
+              Open to internship · June 2026
             </div>
-            <a class="button" id="my-work-link" href="#my-work-section">
-              <span class="button-text">Check out my projects</span> 
-              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
+            <span class="main-title">Hey, I'm Hsan Ennouri.</span>
+            <div class="body-text">I'm an Electrical and Electronics Engineering Master's Student at EPFL, interested in embedded systems, Signal Processing, and Bioelectronics.</div>
+          </div>
+          <a class="button" id="my-work-link" href="#my-work-section">
+            <span class="button-text">Check out my projects</span>
+            <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+          </a>
         </div>
       </div>
 
+      <hr class="section-divider">
+
+      <!-- ABOUT -->
       <div id="about-section">
         <span class="subheader-text">My Background</span>
         <div class="about-section-content">
           <div class="body-text">
-            Curiosity and a love for challenges define my engineering approach. With a background of over 11 years in competitive tennis, I bring discipline and resilience to my technical work. I am currently pursuing my Master’s degree at EPFL (Switzerland), following an exchange year at the National University of Singapore (NUS).
+            Curiosity and a love for challenges define my engineering approach. With a background of over 11 years in competitive tennis, I bring discipline and resilience to my technical work. I am currently pursuing my Master's degree at EPFL (Switzerland), following an exchange year at the National University of Singapore (NUS).
           </div>
           <div class="body-text">
-            I love to bridge the gap between hardware and software. My experience ranges from designing PCB architectures and embedded systems (C++/STM32) to implementing signal processing algorithms for wireless communication. I am currently looking for a <strong>3-month summer internship starting June 2026</strong>, particularly in hardware design or biomedical applications.
+            I love to bridge the gap between hardware and software. My experience ranges from designing PCB architectures and embedded systems (C++/STM32) to implementing signal processing algorithms for wireless communication.
           </div>
         </div>
       </div>
 
+      <hr class="section-divider">
+
+      <!-- SKILLS -->
+      <div id="skills-section">
+        <span class="subheader-text">Technical Skills</span>
+        <div class="skills-groups">
+          <div class="skill-group-row">
+            <span class="skill-group-label">Embedded Systems</span>
+            <div class="skill-tags">
+              <span class="skill-tag">STM32</span>
+              <span class="skill-tag">ESP32</span>
+              <span class="skill-tag">AVR Assembly</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">FreeRTOS</span>
+            </div>
+          </div>
+          <div class="skill-group-row">
+            <span class="skill-group-label">Signal Processing</span>
+            <div class="skill-tags">
+              <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">OFDM</span>
+              <span class="skill-tag">DSP</span>
+              <span class="skill-tag">Channel Estimation</span>
+            </div>
+          </div>
+          <div class="skill-group-row">
+            <span class="skill-group-label">Hardware Design</span>
+            <div class="skill-tags">
+              <span class="skill-tag">PCB Design</span>
+              <span class="skill-tag">KiCad</span>
+              <span class="skill-tag">Altium</span>
+              <span class="skill-tag">CATIA</span>
+            </div>
+          </div>
+          <div class="skill-group-row">
+            <span class="skill-group-label">Robotics & Tools</span>
+            <div class="skill-tags">
+              <span class="skill-tag">ROS 2</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Gazebo</span>
+            </div>
+          </div>
+          <div class="skill-group-row">
+            <span class="skill-group-label">Languages</span>
+            <div class="skill-tags">
+              <span class="skill-tag">French (native)</span>
+              <span class="skill-tag">English (fluent)</span>
+              <span class="skill-tag">Arabic (native)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- INTERESTS -->
+      <div id="interests-section">
+        <span class="subheader-text">Beyond Engineering</span>
+        <div class="interests-grid">
+          <div class="interest-block">
+            <div class="interest-block-title">Competitive Tennis</div>
+            <div class="interest-block-desc">Over 11 years of competitive play reaching a national ranking in Tunisia. Tennis has shaped my approach to consistency, strategic thinking, and performing under pressure.</div>
+          </div>
+          <div class="interest-block">
+            <div class="interest-block-title">Student Club / Team</div>
+            <div class="interest-block-desc">[Add your club or team here. Example: EPFL Rocket Team — contributing to the propulsion subteam for high-altitude competition launches.]</div>
+          </div>
+          <div class="interest-block">
+            <div class="interest-block-title">International Experience</div>
+            <div class="interest-block-desc">Exchange year at the National University of Singapore broadened my perspective on global engineering culture and interdisciplinary collaboration.</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- PROJECTS -->
       <div id="my-work-section">
         <span class="subheader-text">Selected Projects</span>
-
         <div class="projects-container">
-          
+
           <div class="project-card">
             <img src="./assets/images/Microbs_AI_generated.png" class="project-image">
             <div class="project-card-text-container">
               <div class="subheader-text project-title">Endovascular Sensor Readout</div>
               <div class="body-text project-card-text">Redesigned a readout circuit for blood flow monitoring. Migrated control logic to STM32 and designed a custom PCB.</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">STM32</span>
+              <span class="project-tag">PCB</span>
+              <span class="project-tag">Analog</span>
             </div>
             <a class="button" href="./project-pages/microbs.html">
               <span class="button-text">Read More</span>
@@ -78,6 +338,11 @@
               <div class="subheader-text project-title">Acoustic OFDM Transceiver</div>
               <div class="body-text project-card-text">Designed a full OFDM system achieving 0% BER. Implemented Zero-Forcing channel estimation, CRC-8 error detection, and Viterbi phase tracking in MATLAB.</div>
             </div>
+            <div class="project-tags">
+              <span class="project-tag">MATLAB</span>
+              <span class="project-tag">OFDM</span>
+              <span class="project-tag">DSP</span>
+            </div>
             <a class="button" href="./project-pages/ofdm.html">
               <span class="button-text">Read More</span>
               <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
@@ -88,7 +353,12 @@
             <img src="./assets/images/Intro_to_Iot.png" class="project-image">
             <div class="project-card-text-container">
               <div class="subheader-text project-title">Biometric Smart Vault</div>
-              <div class="body-text project-card-text">Co-engineered a connected vault using ESP32. Designed the CAD mechanism, handled hardware integration, and wrote C++ firmware for keypad/LCD control.</div>
+              <div class="body-text project-card-text">Co-engineered a connected vault using ESP32. Designed the CAD mechanism, handled hardware integration, and wrote C++ firmware.</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">ESP32</span>
+              <span class="project-tag">C++</span>
+              <span class="project-tag">CAD</span>
             </div>
             <a class="button" href="./project-pages/iot.html">
               <span class="button-text">Read More</span>
@@ -102,18 +372,27 @@
               <div class="subheader-text project-title">Autonomous Navigation</div>
               <div class="body-text project-card-text">Implemented ROS 2 navigation stacks with A* planning for ground robots and coded an EKF from scratch for drone state estimation in Gazebo.</div>
             </div>
+            <div class="project-tags">
+              <span class="project-tag">ROS 2</span>
+              <span class="project-tag">EKF</span>
+              <span class="project-tag">C++</span>
+            </div>
             <a class="button" href="./project-pages/robotics.html">
               <span class="button-text">Read More</span>
               <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
             </a>
           </div>
 
-
           <div class="project-card">
             <img src="./assets/images/0.Microcontrolleur.png" class="project-image">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Morse code Translator</div>
+              <div class="subheader-text project-title">Morse Code Translator</div>
               <div class="body-text project-card-text">Developed a low-level translator system in pure AVR Assembly. Wrote custom drivers for peripherals and managed interrupts for precise timing.</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">AVR</span>
+              <span class="project-tag">Assembly</span>
+              <span class="project-tag">Drivers</span>
             </div>
             <a class="button" href="./project-pages/morse.html">
               <span class="button-text">Read More</span>
@@ -125,19 +404,16 @@
       </div>
     </div>
 
-  
+    <!-- FOOTER — fixed: no duplicate mail, added GitHub -->
     <div id="footer">
-      
       <a class="icon-link" href="mailto:hsan.ennouri2002@gmail.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+        <img src="./assets/icons/mail.svg" class="footer-icon"/>
       </a>
-
       <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
-        <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+        <img src="./assets/icons/linkedin.svg" class="footer-icon"/>
       </a>
-
-      <a class="icon-link" href="mailto:hsan.ennouri@epfl.ch">
-        <img src="../assets/icons/mail.svg" class="footer-icon"/>
+      <a class="icon-link" target="_blank" href="https://github.com/hsan-ennouri">
+        <img src="./assets/icons/github.svg" class="footer-icon"/>
       </a>
     </div>
 
