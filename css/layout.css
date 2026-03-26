@@ -129,16 +129,38 @@ body {
   height: auto;
 }
 
-#project-details {
+/* Project page sections (replaces old #project-details) */
+.project-section {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
-.project-details-content {
+.project-section-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+}
+
+/* Muted subtitle under project title */
+.project-meta {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Bold section divider — used on index and all project pages */
+.section-divider {
+  border: none;
+  border-top: 2px solid #141414;
+  margin: 0;
+}
+
+/* Project links row */
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
     /* Project Gallery */
