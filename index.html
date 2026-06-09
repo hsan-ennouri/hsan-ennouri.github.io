@@ -169,6 +169,51 @@
         color: #555;
       }
 
+      /* ── Coming Soon card overlay ── */
+      .project-card-coming-soon {
+        position: relative;
+      }
+
+      .project-card-coming-soon .project-image-wrapper {
+        position: relative;
+        display: block;
+        line-height: 0; /* remove inline gap */
+      }
+
+      .project-card-coming-soon .project-image {
+        display: block;
+        width: 100%;
+        filter: grayscale(60%) brightness(0.7);
+      }
+
+      .coming-soon-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+
+      .coming-soon-badge {
+        background: #141414;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 50px;
+        white-space: nowrap;
+      }
+
+      /* Disable the Read More button on coming-soon cards */
+      .project-card-coming-soon .button-disabled {
+        opacity: 0.35;
+        pointer-events: none;
+        cursor: default;
+      }
+
       /* ── Responsive ── */
       @media only screen and (max-width: 600px) {
         .skill-group-row {
@@ -444,6 +489,52 @@
             </a>
           </div>
 
+          <!-- NEW: UNO Card Recognition — Coming Soon -->
+          <div class="project-card project-card-coming-soon">
+            <div class="project-image-wrapper">
+              <img src="./assets/images/uno_pattern_recognition.png" class="project-image" alt="UNO Card Recognition">
+              <div class="coming-soon-overlay">
+                <span class="coming-soon-badge">Coming Soon</span>
+              </div>
+            </div>
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">UNO Card Recognition</div>
+              <div class="body-text project-card-text">Classical computer vision pipeline for real-time detection and classification of UNO cards. Built with HSV segmentation, morphological filtering, and normalised cross-correlation template matching — no neural networks.</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Image Processing</span>
+            </div>
+            <a class="button button-disabled" href="#" aria-disabled="true">
+              <span class="button-text">Read More</span>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+
+          <!-- NEW: Power Electronics — Coming Soon -->
+          <div class="project-card project-card-coming-soon">
+            <div class="project-image-wrapper">
+              <img src="./assets/images/power_electronics.png" class="project-image" alt="Power Electronics">
+              <div class="coming-soon-overlay">
+                <span class="coming-soon-badge">Coming Soon</span>
+              </div>
+            </div>
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">Power Electronics</div>
+              <div class="body-text project-card-text">Ongoing project in power conversion and control. Details will be published on completion.</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">PLECS</span>
+              <span class="project-tag">LTspice</span>
+              <span class="project-tag">Control</span>
+            </div>
+            <a class="button button-disabled" href="#" aria-disabled="true">
+              <span class="button-text">Read More</span>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
@@ -460,3 +551,5 @@
         <img src="./assets/icons/github.svg" class="footer-icon"/>
       </a>
     </div>
+  </body>
+</html>

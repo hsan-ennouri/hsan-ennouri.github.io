@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../assets/images/1311.png" />
+    <title>UNO Card Recognition | Hsan Ennouri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <script defer src="../js/script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+      <a class="nav-title-link" href="../index.html">
+        <span class="nav-title">Hsan Ennouri</span>
+      </a>
+      <div class="navbar-actions">
+        <a class="button" href="../assets/documents/CV_Hsan_Ennouri.pdf" target="_blank">
+          <span class="button-text">Resume</span>
+        </a>
+        <a class="button-filled" href="mailto:hsan.ennouri@epfl.ch">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="main-content">
+
+      <div id="project-header">
+        <div class="main-title">UNO Card Recognition</div>
+        <div class="project-meta">Spring 2025–2026 &nbsp;·&nbsp; EPFL &nbsp;·&nbsp; EE-558 / Pattern Recognition</div>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="project-section">
+        <span class="subheader-text">Objective</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            Designed and implemented a fully classical computer vision pipeline to detect and classify UNO cards in real-time game images — identifying each card's color and value and mapping it to the correct player region, with no neural networks involved.
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="project-section">
+        <span class="subheader-text">Key Contributions</span>
+        <div class="project-section-content">
+          <div class="body-text">
+            <ul>
+              <li><strong>Background Removal:</strong> Built a temporal median estimator across training images to model static backgrounds. The resulting closure strips non-white tablecloths from each frame before detection, with results cached to disk for efficiency on subsequent runs.</li>
+              <li><strong>Template Library Construction:</strong> Extracted per-color HSV masks from reference images, merged nearby rotated bounding boxes, and affine-warped the upper-left corner of each card to a fixed 85×85 px patch. Templates are filtered to retain only the white label pixels and dominant card color, and saved separately for colored and black (wild/draw-4) cards.</li>
+              <li><strong>Card Detection Pipeline:</strong> Applied per-channel morphological closing after HSV masking, then filtered contours by convex polygon approximation and rotated-bounding-box size thresholds. Each accepted candidate is cropped and classified by normalized cross-correlation (<code>TM_CCOEFF_NORMED</code>) over 20 rotation angles, with a post-processing rule to resolve the draw-2 / 2 ambiguity.</li>
+              <li><strong>Region Assignment:</strong> Used <code>pointPolygonTest</code> depth to assign each detected card to the player region where its center sits deepest, cleanly handling the overlapping polygon boundaries between adjacent player areas.</li>
+              <li><strong>Active Player Detection:</strong> Detected the turn token via two dedicated detectors — a small dark rectangular blob on white backgrounds and a small yellow circular blob on dark backgrounds — selected automatically by inspecting the four corner patches of each image.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <div class="project-links">
+        <a class="button" href="https://github.com/hsan-ennouri/uno-card-recognition" target="_blank">
+          <span class="button-text">View Code on GitHub</span>
+          <img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+        </a>
+      </div>
+
+      <hr class="section-divider">
+
+      <div id="project-gallery">
+        <span class="subheader-text">Visuals</span>
+        <div class="project-gallery-content">
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/uno_pipeline_overview.png" class="gallery-image" alt="Pipeline block diagram">
+            <span class="image-caption">Fig 1. Full detection pipeline — from raw frame to Kaggle submission CSV</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/uno_regions.png" class="gallery-image" alt="Player region layout">
+            <span class="image-caption">Fig 2. Five player/center regions overlaid on a game image</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/uno_color_masks.png" class="gallery-image" alt="HSV color masks">
+            <span class="image-caption">Fig 3. HSV color masks after morphological closing (yellow, red, green, blue, black)</span>
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/uno_detections.png" class="gallery-image" alt="Final detection output">
+            <span class="image-caption">Fig 4. Detected cards annotated by color and assigned to player regions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEXT PROJECT NAVIGATION -->
+      <div id="project-nav" style="display:flex; justify-content:space-between; align-items:center;">
+        <a href="../index.html" class="button">
+          <img src="../assets/icons/arrow-left.svg" class="left-arrow-icon"/>
+          <span class="button-text">Back to Home</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <a class="icon-link" href="mailto:hsan.ennouri2002@gmail.com">
+        <img src="../assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hsan-ennouri">
+        <img src="../assets/icons/linkedin.svg" class="footer-icon"/>
+      </a>
+      <a class="icon-link" target="_blank" href="https://github.com/hsan-ennouri">
+        <img src="../assets/icons/github.svg" class="footer-icon"/>
+      </a>
+    </div>
+</body>
+</html>
