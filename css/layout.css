@@ -194,6 +194,67 @@ body {
     }
 
 
+/* Project card image wrapper (needed for coming-soon overlay positioning) */
+.project-image-wrapper {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+/* Coming Soon overlay */
+.project-card-coming-soon .project-image {
+  display: block;
+  width: 100%;
+  filter: grayscale(60%) brightness(0.7);
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.coming-soon-badge {
+  background: #141414;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+/* Disabled button on coming-soon cards */
+.button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Project tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: -16px;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 2px solid #d8d8d8;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+}
+
+
 /* Extra Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1600px) {
   #main-content {

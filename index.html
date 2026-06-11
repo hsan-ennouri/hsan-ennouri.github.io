@@ -14,51 +14,13 @@
     <script defer src="./js/script.js"></script>
 
     <style>
-      /* ── NAV: filled Contact Me button ── */
-      .navbar-actions {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-      }
-
-      /* Override the standard button to get a filled variant */
-      a.button-filled {
-        padding: 8px 16px;
-        border: 3px solid #141414;
-        border-radius: 50px;
-        background-color: #141414;
-        color: #fff;
-        text-decoration: none;
-        width: fit-content;
-        display: flex;
-        gap: 5px;
-        align-items: center;
-      }
-      a.button-filled:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-        cursor: pointer;
-      }
-      a.button-filled .button-text {
-        color: #fff;
-      }
-
-      /* ── Section dividers: bold top rule ── */
-      .section-divider {
-        border: none;
-        border-top: 2px solid #141414;
-        margin: 0;
-      }
-
       /* ── Availability badge ── */
       .availability-badge {
         display: inline-flex;
         align-items: center;
         gap: 7px;
-        background: #e8f0f8;   /* White: Available */
-        color: #1a4a7a;        /* Dark blue: Available */
-        /*background: #e8f5ee;*/ /* Light green: Actively searching for internship*/
-        /*color: #1a7a50;*/      /* Dark green: Actively searching for internship */
+        background: #e8f0f8;
+        color: #1a4a7a;
         border-radius: 30px;
         padding: 5px 14px 5px 9px;
         font-size: 14px;
@@ -69,8 +31,7 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: #2471A3; /* Blue: Available now */
-        /*background: #22a060;*/ /* Green: actively searching right */
+        background: #2471A3;
         flex-shrink: 0;
       }
 
@@ -149,69 +110,6 @@
         display: flex;
         flex-direction: column;
         gap: 18px;
-      }
-
-      /* ── Project card tags ── */
-      .project-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-top: -16px; /* tighten the gap from card text */
-      }
-
-      .project-tag {
-        display: inline-block;
-        padding: 3px 10px;
-        border: 2px solid #d8d8d8;
-        border-radius: 50px;
-        font-size: 12px;
-        font-weight: 500;
-        color: #555;
-      }
-
-      /* ── Coming Soon card overlay ── */
-      .project-card-coming-soon {
-        position: relative;
-      }
-
-      .project-card-coming-soon .project-image-wrapper {
-        position: relative;
-        display: block;
-        line-height: 0; /* remove inline gap */
-      }
-
-      .project-card-coming-soon .project-image {
-        display: block;
-        width: 100%;
-        filter: grayscale(60%) brightness(0.7);
-      }
-
-      .coming-soon-overlay {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: none;
-      }
-
-      .coming-soon-badge {
-        background: #141414;
-        color: #fff;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 1.2px;
-        text-transform: uppercase;
-        padding: 6px 16px;
-        border-radius: 50px;
-        white-space: nowrap;
-      }
-
-      /* Disable the Read More button on coming-soon cards */
-      .project-card-coming-soon .button-disabled {
-        opacity: 0.35;
-        pointer-events: none;
-        cursor: default;
       }
 
       /* ── Responsive ── */
@@ -318,7 +216,6 @@
               <span class="skill-tag">LTspice</span>
               <span class="skill-tag">PLECS</span>
               <span class="skill-tag">Logisim Evolution</span>
-              <!-- <span class="skill-tag">Gazebo</span> -->
             </div>
           </div>
           <div class="skill-group-row">
@@ -405,8 +302,8 @@
         <span class="subheader-text">Selected Projects</span>
         <div class="projects-container">
 
-          <!-- NEW: UNO Card Recognition — Coming Soon -->
-          <div class="project-card">
+          <!-- UNO Card Recognition — Coming Soon -->
+          <div class="project-card project-card-coming-soon">
             <div class="project-image-wrapper">
               <img src="./assets/images/7.uno_pattern_recognition.png" class="project-image" alt="UNO Card Recognition">
               <div class="coming-soon-overlay">
@@ -428,8 +325,8 @@
             </a>
           </div>
 
-          <!-- NEW: Power Electronics — Coming Soon -->
-          <div class="project-card">
+          <!-- Power Electronics — Coming Soon -->
+          <div class="project-card project-card-coming-soon">
             <div class="project-image-wrapper">
               <img src="./assets/images/6.power_electronics.jpg" class="project-image" alt="Power Electronics">
               <div class="coming-soon-overlay">
